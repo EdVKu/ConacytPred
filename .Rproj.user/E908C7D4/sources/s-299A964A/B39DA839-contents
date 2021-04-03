@@ -1,11 +1,8 @@
 library(twitteR)
 
-apikey = "Wucix0bguEiw8QdRSAdU1y7vW"
-apisec = "3Brwv1DTktA5FRzeEv0KuIhz1DNoEZwuVUatoCxpnZNBbeSO4S"
-apitoken = "1307101446094102529-BTq4D8sM8PGd5oL95ghnCmDyHTZ2uN"
-tsec = "YsoY66VgWUnV3Cxgjjm4x1eDuNoijxLwmoGQLY0mMDmY7"
+apikey = "8DYohFObEbFw1BC36iUhulKJk"
+apisec = "EtnqNrsb4ZIFJ5WyfVu6STuteirjdELtL8H7XEJOadna2z7bJb"
+apitoken = "1307101446094102529-QEPqfbL7fSFuiGwdwlvNzetBxY7Hdz"
+tsec = "F6nygvrhoVwnkk6pzB9HBLS1xAXt5QLeMNmrQLIpHn7uR"
 setup_twitter_oauth(apikey, apisec, apitoken, tsec)
 
-tw = searchTwitter('@ConacytYa', n = 25)
-strip_retweets(tw)
-d = twListToDF(tw)
