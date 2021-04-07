@@ -14,7 +14,11 @@ conacyt <- userTimeline("ConacytYa", n = 150)
 df <- twListToDF(conacyt)
 df$text <- str_replace_all(df$text, "[^[:alnum:]]", "")
 
-datos_conacyt <- data.frame(fecha=as.Date(trunc(df$created, "day")), texto = factor(tolower(df$text)))
+diafe <- as.Date(trunc(df$created, "day"))
 
-levels(datos_conacyt$texto) <- c(0,1)
+datos_conacyt <- data.frame(ID = 1:length(df$text), fecha=diafe, dias_hoy = as.numeric(Sys.Date()-diafe),
+                            depo = factor(tolower(df$text)))
+
+
+levels(datos_conacyt$depo) <- c(0,1)
 
