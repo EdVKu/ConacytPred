@@ -1,2 +1,2 @@
 # ConacytPred
-Algoritmo de Machine Learning que usará la timeline de la cuenta @ConacytYa para predecir la fecha de depósito de beca de posgrado CONACyT
+Proyect that will consist of doing web scraping of the @ConacytYa twitter account's timeline in order to predict the date in which CONACyT will give future deposits
