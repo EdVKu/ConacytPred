@@ -24,7 +24,9 @@ pagosConacyt <-  datos_conacyt[datos_conacyt$depo==1,]
 
 dif <- c(datos_conacyt$dias_hoy[1])
 
-for (i in 1:length(pagosConacyt$depo)-1) {
+ldif = length(pagosConacyt$depo)-1
+
+for (i in 1:ldif) {
   dif <- append(dif,(pagosConacyt$dias_hoy[i+1]-pagosConacyt$dias_hoy[i]))
 }
 
