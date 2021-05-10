@@ -2,8 +2,7 @@ require(twitteR)
 require(caret)
 require(stringr)
 require(dplyr)
-source('~/UNAM 2020-24/DATSCI/r/ConacytPred/ConacytPred/API/api.R')
-
+source('~/UNAM 2020-24/DATSCI/r/ConacytPred/API/api.R')
 
 
 conacyt <- api()
