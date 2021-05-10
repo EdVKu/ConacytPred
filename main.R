@@ -39,4 +39,4 @@ lmod <- lm(y~x)
 
 proxpago <- as.numeric(lmod$coefficients[1] + (lmod$coefficients[2]*(ldif+2))-pagosConacyt$difdias[1])
 
-
+print(paste("The next payment will be on/El próximo pago será el", as.character(Sys.Date() + proxpago), sep = " "))
