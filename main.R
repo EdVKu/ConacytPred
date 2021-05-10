@@ -2,7 +2,7 @@ require(twitteR)
 require(caret)
 require(stringr)
 require(dplyr)
-source('~/UNAM 2020-24/DATSCI/r/ConacytPred/ConacytPred/api.R')
+source('~/UNAM 2020-24/DATSCI/r/ConacytPred/ConacytPred/API/api.R')
 
 
 
@@ -32,5 +32,12 @@ for (i in 1:ldif) {
 
 
 pagosConacyt <- pagosConacyt %>% mutate(difdias = dif)
+
+y = pagosConacyt$difdias[-1]
+x = seq(ldif,1,-1)
+
+lmod <- lm(y~x)
+
+proxpago <- as.numeric(lmod$coefficients[1] + (lmod$coefficients[2]*(ldif+2))-pagosConacyt$difdias[1])
 
 
